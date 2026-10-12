@@ -2,7 +2,7 @@ import type { Dictionary } from "./types";
 
 export const cs: Dictionary = {
   meta: {
-    title: "Barbora Ohnoutková · Frontend developer",
+    title: "Barbora Ohnoutková · Full-stack vývojářka (frontend)",
     description:
       "Barbora Ohnoutková – full-stack vývojářka se zaměřením na frontend, 4+ roky praxe (React, Next.js, TypeScript, Flutter). Portfolio a životopis.",
   },
@@ -10,32 +10,29 @@ export const cs: Dictionary = {
   nav: {
     label: "Hlavní navigace",
     sections: { experience: "Zkušenosti", technologies: "Technologie", projects: "Projekty", contact: "Kontakt" },
-    game: "Herní verze",
     switchTo: "Switch to English",
   },
   hero: {
-    location: "Ostrava, Česko",
-    status: "Otevřená novým příležitostem",
-    title: [{ text: "Full-stack developer " }, { text: "se zaměřením na frontend", highlight: true }],
+    greeting: "Ahoj, jsem",
     intro:
-      "Ahoj, jsem Barbora a již 4 roky vyvíjím intuitivní, vizuálně působivé a vysoce funkční webové a mobilní aplikace v Reactu, Next.js, TypeScriptu a Flutteru.",
+      "Full-stack vývojářka profesí, frontendistka srdcem. Už přes 4 roky tvořím intuitivní a vizuálně zajímavé webové aplikace s velkým důrazem na detail.",
     ctaPrimary: "Moje projekty",
     cv: "Stáhnout CV",
     photoAlt: "Portrét Barbory Ohnoutkové",
   },
   experience: {
-    kicker: "Dosavadní zkušenosti",
     title: "Práce a vzdělání",
-    tabs: { work: "Pracovní zkušenosti", education: "Vzdělání" },
+    tabs: { work: "Práce", education: "Vzdělání" },
     present: "dosud",
     work: {
       smartgis: {
         role: "Full-stack Developer",
         employment: "částečný úvazek",
         points: [
-          "Rozšiřování ekosystému eDomovnice a vývoj mobilních aplikací od návrhu po implementaci.",
+          "Rozšiřování webové aplikace eDomovnice a vývoj její mobilní aplikace od základu.",
           "Vývoj mobilní aplikace jízdních řádů pro město Třebíč.",
-          "Přímá spolupráce s klientem na rozsáhlém Next.js projektu – od analýzy požadavků po realizaci.",
+          "Návrh rozhraní mobilních aplikací ve Figmě.",
+          "Přímá spolupráce s klientem na rozsáhlém projektu – od analýzy požadavků po realizaci.",
         ],
       },
       folklor: {
@@ -46,7 +43,7 @@ export const cs: Dictionary = {
       tietoevry: {
         role: "Software Developer",
         employment: "částečný úvazek",
-        points: ["Vývoj webových aplikací v ASP.NET (C#) a Reactu."],
+        points: ["Vývoj webových aplikací v ASP.NET (C#) a první práce s Reactem."],
       },
       cokafe: {
         role: "Baristka",
@@ -64,7 +61,7 @@ export const cs: Dictionary = {
       master: {
         degree: "Magisterské studium (Mgr.)",
         field: "Aplikovaná informatika – Vývoj software",
-        points: ["Státní závěrečné zkoušky splněny, obhajoba již dokončené diplomové práce v lednu 2027."],
+        points: ["Státní závěrečné zkoušky splněny, obhajoba diplomové práce v lednu 2027."],
       },
       bachelor: {
         degree: "Bakalářské studium (Bc.)",
@@ -74,59 +71,76 @@ export const cs: Dictionary = {
     },
   },
   technologies: {
-    kicker: "Technologie",
     title: "S čím pracuji",
     text: "Jazyky, frameworky a nástroje, které používám.",
     groups: {
-      languages: { title: "Jazyky" },
-      frameworks: { title: "Frameworky a knihovny" },
-      tools: { title: "Nástroje" },
-      design: { title: "Design" },
-      ai: { title: "AI" },
+      languages: "Jazyky",
+      frameworks: "Frameworky",
+      tools: "Nástroje",
+      design: "Design",
+      ai: "AI",
     },
+    labels: { wireframing: "Wireframy", prototyping: "Prototypování" },
   },
   projects: {
-    kicker: "Projekty",
     title: "Závěrečné práce a projekty",
     links: { site: "Web", paper: "Text práce", repo: "Kód" },
+    prev: "Předchozí projekt",
+    next: "Další projekt",
     items: {
       gamePortfolio: {
         type: "Ukázka designu",
         title: "Portfolio ve stylu hry",
         description:
-          "Alternativní verze mého portfolia jako web v pixel-art stylu – méně profesionální, ale více autentická a osobnější. Navrženo a postaveno mnou.",
+          "Tento životopis jako web ve stylu útulné indie hry – úvodní animace s logem v podobě kostky d20, deník úkolů, hod kostkou se zajímavostmi a skrytý Konami kód. Navrhla a nakódovala jsem ho sama.",
         imageAlt: "Úvodní sekce portfolia ve stylu hry",
       },
       masterThesis: {
         type: "Diplomová práce",
         title: "Aplikace pro správu osobních financí s podporou finanční gramotnosti",
         description:
-          "Webová aplikace pro sledování příjmů a výdajů, rozpočtování a plánování financí. Součástí je AI asistent pro podporu finanční gramotnosti.",
+          "Webová aplikace pro správu osobních financí, která zároveň učí finanční gramotnosti, s integrovaným AI agentem. Obhajoba v lednu 2027.",
       },
       bachelorThesis: {
         type: "Bakalářská práce",
         title: "Webová prezentace studijních plánů",
         description:
-          "Webová aplikace pro prezentaci studijních plánů Univerzity Palackého v Olomouci. Umožňuje generovat propagační materiály a upravovat způsob prezentace dat.",
+          "Webová aplikace pro prezentaci studijních plánů Univerzity Palackého v Olomouci. Umí také generovat propagační materiály a upravovat způsob prezentace dat.",
       },
       studioOpachova: {
         type: "Projekt pro klienta",
         title: "Studio Opachová",
-        description: "Čistý, vzdušný web kosmetického studia, který působí stejně klidně jako samotný salon.",
+        description: "Web pro kosmetické studio. Celý proces jsem vedla sama – od požadavků přes návrh po realizaci.",
       },
     },
   },
   contact: {
-    title: [{ text: "Hledáte frontend vývojářku? " }, { text: "Napište mi e-mail.", highlight: true }],
+    title: "Hledáte frontend vývojářku? Napište mi e-mail.",
+    note: "Ostrava · Hledám práci",
     email: "E-mail",
     phone: "Telefon",
   },
   footer: {
+    tagline: "Full-stack vývojářka se zaměřením na frontend z Ostravy.",
+    cats: "Moji kocouři Kebab a Mugen",
     navigate: "Navigace",
     projects: "Projekty",
     socials: "Sítě",
     builtWith: "Postaveno na",
     rights: "Všechna práva vyhrazena.",
+  },
+  cv: {
+    title: "Životopis",
+    tagline:
+      "Full-stack vývojářka se zaměřením na frontend a 4+ roky praxe ve vývoji webových a mobilních aplikací. Dokončuji magisterské studium Aplikované informatiky.",
+    experience: "Pracovní zkušenosti",
+    projects: "Vybrané projekty",
+    skills: "Dovednosti",
+    education: "Vzdělání",
+    languages: "Jazyky",
+    languageList: ["Čeština – rodilá mluvčí", "Angličtina – plynně (C1)"],
+    interests: "Zájmy",
+    interestList: "Bouldering, folklorní tanec, čtení, videohry a D&D",
   },
   notFound: {
     title: "Stránka nenalezena",

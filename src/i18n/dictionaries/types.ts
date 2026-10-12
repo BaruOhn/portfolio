@@ -1,12 +1,18 @@
-import type { EducationId, ExperienceId, ProjectId, ProjectLink, TechGroupId } from "@/content/profile";
+import type {
+  EducationId,
+  ExperienceId,
+  ProjectId,
+  ProjectLink,
+  TechGroupId,
+  TranslatedTech,
+} from "@/content/profile";
 import type { SectionId } from "@/content/sections";
 
-type SectionHeading = { kicker: string; title: string; text?: string };
+type SectionHeading = { title: string; text?: string };
 
 export type NavDictionary = {
   label: string;
   sections: Record<SectionId, string>;
-  game: string;
   switchTo: string;
 };
 
@@ -23,9 +29,8 @@ export type Dictionary = {
   skipToContent: string;
   nav: NavDictionary;
   hero: {
-    location: string;
-    status: string;
-    title: { text: string; highlight?: boolean }[];
+    /** Small line above the name */
+    greeting: string;
     intro: string;
     ctaPrimary: string;
     cv: string;
@@ -33,23 +38,42 @@ export type Dictionary = {
   };
   experience: ExperienceDictionary;
   technologies: SectionHeading & {
-    groups: Record<TechGroupId, { title: string; items?: string[] }>;
+    groups: Record<TechGroupId, string>;
+    labels: Record<TranslatedTech, string>;
   };
   projects: SectionHeading & {
     links: Record<ProjectLink, string>;
+    prev: string;
+    next: string;
     items: Record<ProjectId, { type: string; title: string; description: string; imageAlt?: string }>;
   };
   contact: {
-    title: { text: string; highlight?: boolean }[];
+    title: string;
+    note: string;
     email: string;
     phone: string;
   };
   footer: {
+    tagline: string;
+    cats: string;
     navigate: string;
     projects: string;
     socials: string;
     builtWith: string;
     rights: string;
+  };
+  /** Printable one-page CV (/[locale]/cv) */
+  cv: {
+    title: string;
+    tagline: string;
+    experience: string;
+    projects: string;
+    skills: string;
+    education: string;
+    languages: string;
+    languageList: string[];
+    interests: string;
+    interestList: string;
   };
   notFound: { title: string; text: string; cta: string };
 };
