@@ -1,6 +1,7 @@
 import { Nav } from "@/components/Nav";
 import { Experience } from "@/components/sections/Experience";
 import { Hero } from "@/components/sections/Hero";
+import { Projects } from "@/components/sections/Projects";
 import { Technologies } from "@/components/sections/Technologies";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
 
@@ -14,6 +15,7 @@ export default async function HomePage() {
         <Hero dict={dict.hero} locale={locale} />
         <Experience dict={dict.experience} />
         <Technologies dict={dict.technologies} />
+        <Projects dict={dict.projects} />
       </main>
     </>
   );

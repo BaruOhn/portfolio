@@ -39,7 +39,7 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
       <body className="font-sans antialiased">
         <a
           href="#main"
-          className="sr-only rounded-xl bg-accent px-4 py-2 text-bg focus:not-sr-only focus:fixed focus:top-20 focus:left-4 focus:z-[60]"
+          className="sr-only rounded-xl bg-accent px-4 py-2 text-bg focus:not-sr-only focus:fixed focus:top-20 focus:left-4 focus:z-60"
         >
           {dict.skipToContent}
         </a>
