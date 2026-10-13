@@ -1,5 +1,6 @@
 import { Nav } from "@/components/Nav";
 import { Experience } from "@/components/sections/Experience";
+import { Footer } from "@/components/sections/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Projects } from "@/components/sections/Projects";
 import { Technologies } from "@/components/sections/Technologies";
@@ -17,6 +18,12 @@ export default async function HomePage() {
         <Technologies dict={dict.technologies} />
         <Projects dict={dict.projects} />
       </main>
+      <Footer
+        contact={dict.contact}
+        footer={dict.footer}
+        nav={dict.nav}
+        projectTitles={dict.projects.items}
+      />
     </>
   );
 }
