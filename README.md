@@ -1,6 +1,6 @@
-# Personal Website 🌙✨
+# Personal Website 🌸
 
-Hello! Thanks for checking out the repo for my portfolio website. It's my online CV in Czech and English, and also a personal project in its own right – a place to show what I've learned as a frontend developer and designer, down to the small details like the drifting light, the scroll animations and two pixel cats in the footer.
+Hello! Thanks for checking out the repo for my portfolio website. It's my online CV in Czech and English, and also a personal project in its own right – a place to show what I've learned as a frontend developer and designer.
 
 ## Getting started
 
@@ -17,6 +17,5 @@ Hello! Thanks for checking out the repo for my portfolio website. It's my online
 - [Geist](https://vercel.com/font) and [Fraunces](https://fonts.google.com/specimen/Fraunces) for type
 - [Simple Icons](https://simpleicons.org/) for the technology logos
 - [Vercel](https://vercel.com/) for easy push-to-deploy hosting
-- [Hollowine](https://hollowine.hollowww.dev/) for design inspiration
 
 Let me know what you think!
