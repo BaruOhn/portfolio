@@ -14,6 +14,8 @@ export type NavDictionary = {
   label: string;
   sections: Record<SectionId, string>;
   switchTo: string;
+  openMenu: string;
+  closeMenu: string;
 };
 
 export type ExperienceDictionary = SectionHeading & {
@@ -29,12 +31,12 @@ export type Dictionary = {
   skipToContent: string;
   nav: NavDictionary;
   hero: {
-    /** Small line above the name */
     greeting: string;
     intro: string;
     ctaPrimary: string;
     cv: string;
     photoAlt: string;
+    scroll: string;
   };
   experience: ExperienceDictionary;
   technologies: SectionHeading & {
@@ -45,7 +47,19 @@ export type Dictionary = {
     links: Record<ProjectLink, string>;
     prev: string;
     next: string;
-    items: Record<ProjectId, { type: string; title: string; description: string; imageAlt?: string }>;
+    inDevelopment: string;
+    items: Record<
+      ProjectId,
+      {
+        type: string;
+        title: string;
+        shortTitle?: string;
+        summary: string;
+        description: string;
+        imageAlt?: string;
+        status?: string;
+      }
+    >;
   };
   contact: {
     title: string;
@@ -61,19 +75,6 @@ export type Dictionary = {
     socials: string;
     builtWith: string;
     rights: string;
-  };
-  /** Printable one-page CV (/[locale]/cv) */
-  cv: {
-    title: string;
-    tagline: string;
-    experience: string;
-    projects: string;
-    skills: string;
-    education: string;
-    languages: string;
-    languageList: string[];
-    interests: string;
-    interestList: string;
   };
   notFound: { title: string; text: string; cta: string };
 };

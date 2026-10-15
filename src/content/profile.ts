@@ -26,6 +26,10 @@ import {
   siTypescript,
   siVercel,
 } from "simple-icons";
+import type { StaticImageData } from "next/image";
+import bachelorThesisShot from "@/assets/projects/bachelor-thesis.jpg";
+import gamePortfolioShot from "@/assets/projects/game-portfolio.jpg";
+import studioOpachovaShot from "@/assets/projects/studio-opachova.jpg";
 import type { Locale } from "@/i18n/config";
 import { csharpIcon, type OutlineIcon, prototypeIcon, sqlIcon, wireframeIcon } from "./outline-icons";
 
@@ -46,13 +50,10 @@ export const socials = [
   { id: "instagram", label: "Instagram", href: "https://www.instagram.com/ohnoutkova.b/" },
 ] as const;
 
-/** Copied from the game portfolio, where `npm run cv` generates them. */
 export const cvFile = (locale: Locale) => `/cv/barbora-ohnoutkova-cv-${locale}.pdf`;
 
-/** Skills whose names are translated; the dictionaries hold their labels. */
 export type TranslatedTech = "wireframing" | "prototyping";
 
-/** Every technology has an icon: a Simple Icons logo or an outline icon. */
 export type Technology = { name: string; icon: SimpleIcon | OutlineIcon; label?: TranslatedTech };
 
 export const techGroups = [
@@ -102,11 +103,10 @@ export const techGroups = [
 ] as const satisfies readonly { id: string; items: readonly Technology[] }[];
 export type TechGroupId = (typeof techGroups)[number]["id"];
 
-/** Dates are "YYYY" or "YYYY-MM"; `end: null` means ongoing. */
 type Period = { start: string; end: string | null };
 
 export const experience = [
-  { id: "smartgis", company: "Smartgis s.r.o.", start: "2023-04", end: "2026-08" },
+  { id: "smartgis", company: "Smartgis s.r.o.", start: "2023-04", end: "2026-09" },
   { id: "folklor", company: "Folklor bez hranic Ostrava", start: "2023-06", end: null },
   { id: "tietoevry", company: "TietoEVRY", start: "2022-07", end: "2022-12" },
   { id: "cokafe", company: "Cokafe", start: "2019-05", end: "2022-07" },
@@ -126,35 +126,35 @@ export type ProjectLink = "site" | "paper" | "repo";
 type Project = {
   id: ProjectId;
   tags: readonly string[];
-  /** Screenshot in public/projects; projects without one get a placeholder */
-  image?: string;
+  image?: StaticImageData;
   links?: Partial<Record<ProjectLink, string>>;
 };
 
+/** In display order (site carousel, footer and CV). */
 export const projects: readonly Project[] = [
+  // {
+  //   id: "gamePortfolio",
+  //   tags: ["Next.js", "TypeScript", "Tailwind CSS", "UI design"],
+  //   image: gamePortfolioShot,
+  //   links: { site: gameSiteUrl },
+  // },
   {
-    id: "gamePortfolio",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "UI design"],
-    image: "/projects/game-portfolio.jpg",
-    links: { site: gameSiteUrl },
-  },
-  {
-    id: "masterThesis",
-    tags: ["Next.js", "TypeScript", "Prisma", "DeepSeek", "OpenRouter"],
+    id: "studioOpachova",
+    tags: ["HTML", "CSS", "JavaScript"],
+    image: studioOpachovaShot,
+    links: { site: "http://www.studio-opachova.cz" },
   },
   {
     id: "bachelorThesis",
     tags: ["JavaScript", "Node.js", "Express", "Tailwind CSS", "Puppeteer"],
+    image: bachelorThesisShot,
     links: {
       paper: "https://theses.cz/id/tww8zl/ohnoutkova_bp.pdf",
       repo: "https://github.com/BaruOhn/study_plans",
     },
   },
   {
-    id: "studioOpachova",
-    tags: ["HTML", "CSS", "JavaScript"],
-    links: { site: "https://www.studio-opachova.cz" },
+    id: "masterThesis",
+    tags: ["Next.js", "TypeScript", "Prisma", "DeepSeek", "OpenRouter"],
   },
 ];
-
-export const techStack = ["Next.js 16", "React 19", "TypeScript 6", "Tailwind CSS 4", "Vercel"] as const;

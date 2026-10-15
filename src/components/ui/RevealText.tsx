@@ -2,9 +2,7 @@ import type { CSSProperties } from "react";
 
 type Props = {
   text: string;
-  /** "load" animates right away (hero); "scroll" waits for <ScrollReveal /> */
   mode?: "load" | "scroll";
-  /** Delay before the first word, for "load" */
   baseDelay?: number;
 };
 

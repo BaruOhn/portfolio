@@ -2,7 +2,7 @@ import { techGroups } from "@/content/profile";
 import type { Dictionary } from "@/i18n/dictionaries/types";
 import { TechIcon } from "../TechIcon";
 import { Section, SectionHeading } from "../ui/Section";
- 
+
 export function Technologies({ dict }: { dict: Dictionary["technologies"] }) {
   return (
     <Section id="technologies">
@@ -10,7 +10,7 @@ export function Technologies({ dict }: { dict: Dictionary["technologies"] }) {
 
       <dl className="border-t border-line/70">
         {techGroups.map(({ id, items }) => (
-          <div key={id} data-reveal className="grid gap-x-12 gap-y-4 border-b border-line/70 py-8 md:grid-cols-[14rem_1fr]">
+          <div key={id} data-reveal className="grid gap-x-12 gap-y-4 border-b border-line/70 py-6 md:grid-cols-[14rem_1fr] md:py-8">
             <dt className="font-serif text-xl">{dict.groups[id]}</dt>
             <dd>
               <ul className="flex flex-wrap gap-x-7 gap-y-3 text-muted">

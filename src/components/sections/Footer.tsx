@@ -1,4 +1,4 @@
-import { person, projects, socials, techStack } from "@/content/profile";
+import { person, projects, socials } from "@/content/profile";
 import { sectionIds } from "@/content/sections";
 import type { Dictionary } from "@/i18n/dictionaries/types";
 import { ButtonLink } from "../ui/Button";
@@ -21,21 +21,39 @@ async function getYear() {
 
 export async function Footer({ contact, footer, nav, projectTitles }: Props) {
   const columns = [
-    { title: footer.navigate, links: sectionIds.map((id) => ({ label: nav.sections[id], href: `#${id}` })) },
-    { title: footer.projects, links: projects.map(({ id }) => ({ label: projectTitles[id].title, href: "#projects" })) },
-    { title: footer.socials, links: socials.map(({ label, href }) => ({ label, href })) },
+    {
+      title: footer.navigate,
+      links: sectionIds.map((id) => ({
+        label: nav.sections[id],
+        href: `#${id}`,
+      })),
+    },
+    {
+      title: footer.projects,
+      links: projects.map(({ id }) => ({
+        label: projectTitles[id].shortTitle ?? projectTitles[id].title,
+        href: "#projects",
+      })),
+    },
+    {
+      title: footer.socials,
+      links: socials.map(({ label, href }) => ({ label, href })),
+    },
   ];
 
   return (
     <footer id="contact" className="relative isolate overflow-hidden">
-      <div className="relative isolate flex min-h-svh items-center overflow-hidden border-y border-line/60">
+      <div className="relative isolate flex items-center overflow-hidden md:min-h-svh">
         <Glow variant="band" />
-        <div className="mx-auto flex w-full max-w-4xl flex-col items-center px-4 py-36 text-center sm:px-6 md:py-48">
-          <h2 className="font-serif text-4xl leading-[1.08] text-balance md:text-6xl">
+        <div className="mx-auto flex w-[min(56rem,90vw)] flex-col items-center py-32 text-center md:py-52">
+          <h2 className="max-w-[16ch] font-serif text-[clamp(2.5rem,7vw,6rem)] leading-[1.02] text-balance">
             <RevealText text={contact.title} />
           </h2>
 
-          <div data-reveal className="mt-12 flex flex-wrap justify-center gap-3">
+          <div
+            data-reveal
+            className="mt-12 flex flex-wrap justify-center gap-3"
+          >
             <Motes>
               <ButtonLink href={`mailto:${person.email}`}>
                 <MailIcon />
@@ -43,7 +61,10 @@ export async function Footer({ contact, footer, nav, projectTitles }: Props) {
                 {person.email}
               </ButtonLink>
             </Motes>
-            <ButtonLink href={`tel:${person.phone.replaceAll(" ", "")}`} variant="secondary">
+            <ButtonLink
+              href={`tel:${person.phone.replaceAll(" ", "")}`}
+              variant="secondary"
+            >
               <PhoneIcon />
               <span className="sr-only">{contact.phone}: </span>
               {person.phone}
@@ -53,7 +74,13 @@ export async function Footer({ contact, footer, nav, projectTitles }: Props) {
               .map(({ id, label, href }) => {
                 const Icon = socialIcons[id];
                 return (
-                  <ButtonLink key={id} href={href} target="_blank" rel="noopener noreferrer" variant="secondary">
+                  <ButtonLink
+                    key={id}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="secondary"
+                  >
                     <Icon /> {label}
                   </ButtonLink>
                 );
@@ -66,19 +93,20 @@ export async function Footer({ contact, footer, nav, projectTitles }: Props) {
         </div>
       </div>
 
-      {/* Links, copyright and the wordmark */}
-      <div className="relative flex min-h-svh flex-col">
-        <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pt-28 pb-16 sm:px-6 md:pt-36">
-          <div className="grid gap-12 md:grid-cols-[1.2fr_2fr]">
+      <div className="relative flex flex-col md:min-h-svh">
+        <div className="relative z-10 w-full px-(--gutter) pt-28 pb-16 md:pt-36">
+          <div className="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
             <div>
               <p className="font-serif text-3xl">{person.name}</p>
-              <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">{footer.tagline}</p>
+              <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">
+                {footer.tagline}
+              </p>
               <div className="mt-8">
                 <PixelCats label={footer.cats} />
               </div>
             </div>
 
-            <div className="grid gap-10 sm:grid-cols-3">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3">
               {columns.map(({ title, links }) => (
                 <nav key={title} aria-label={title}>
                   <Label>{title}</Label>
@@ -87,7 +115,10 @@ export async function Footer({ contact, footer, nav, projectTitles }: Props) {
                       <li key={label}>
                         <a
                           href={href}
-                          {...(href.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })}
+                          {...(href.startsWith("http") && {
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                          })}
                           className="transition-colors duration-300 hover:text-text"
                         >
                           {label}
@@ -105,7 +136,7 @@ export async function Footer({ contact, footer, nav, projectTitles }: Props) {
               © {await getYear()} {person.name} · {footer.rights}
             </p>
             <p>
-              {footer.builtWith} {techStack.join(" · ")}
+              {footer.builtWith} 
             </p>
           </div>
         </div>

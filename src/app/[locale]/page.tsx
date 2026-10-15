@@ -1,4 +1,5 @@
 import { Nav } from "@/components/Nav";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { Experience } from "@/components/sections/Experience";
 import { Footer } from "@/components/sections/Footer";
 import { Hero } from "@/components/sections/Hero";
@@ -24,6 +25,7 @@ export default async function HomePage() {
         nav={dict.nav}
         projectTitles={dict.projects.items}
       />
+      <ScrollReveal />
     </>
   );
 }

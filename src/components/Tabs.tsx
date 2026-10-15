@@ -23,7 +23,6 @@ export function Tabs({ tabs, label }: { tabs: Tab[]; label: string }) {
         className="relative inline-grid rounded-full border border-line bg-surface/60 p-1"
         style={{ gridTemplateColumns: `repeat(${tabs.length}, minmax(0, 1fr))` }}
       >
-        {/* Sliding highlight behind the selected tab */}
         <span
           aria-hidden="true"
           className="absolute inset-y-1 left-1 rounded-full bg-accent/15 ring-1 ring-accent/25 transition-transform duration-500 ease-ember"
@@ -60,7 +59,7 @@ export function Tabs({ tabs, label }: { tabs: Tab[]; label: string }) {
           id={`${baseId}-panel-${tab.id}`}
           aria-labelledby={`${baseId}-tab-${tab.id}`}
           hidden={selected !== i}
-          className="animate-rise mt-10"
+          className="animate-rise mt-8"
         >
           {tab.content}
         </div>

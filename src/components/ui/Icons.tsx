@@ -55,6 +55,25 @@ export const GraduationIcon = ({ className }: IconProps) => (
   </Icon>
 );
 
+export const MenuIcon = ({ className }: IconProps) => (
+  <Icon className={className}>
+    <path d="M4 6h16M4 12h16M4 18h16" />
+  </Icon>
+);
+
+export const CloseIcon = ({ className }: IconProps) => (
+  <Icon className={className}>
+    <path d="M18 6 6 18M6 6l12 12" />
+  </Icon>
+);
+
+export const ClockIcon = ({ className }: IconProps) => (
+  <Icon className={className}>
+    <circle cx="12" cy="12" r="10" />
+    <path d="M12 6v6l4 2" />
+  </Icon>
+);
+
 export const GlobeIcon = ({ className }: IconProps) => (
   <Icon className={className}>
     <circle cx="12" cy="12" r="10" />

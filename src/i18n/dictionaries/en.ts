@@ -11,14 +11,17 @@ export const en: Dictionary = {
     label: "Main",
     sections: { experience: "Experience", technologies: "Stack", projects: "Projects", contact: "Contact" },
     switchTo: "Přepnout do češtiny",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
   },
   hero: {
     greeting: "Hi, I'm",
     intro:
-      "A full-stack developer by profession, a frontend developer by passion. For over 4 years, I've been building intuitive, visually interesting web applications with great attention to detail.",
+      "Full-stack by profession, frontend by passion. For 4+ years, crafting thoughtful web and mobile experiences with an eye for detail.",
     ctaPrimary: "See my work",
     cv: "Download CV",
     photoAlt: "Portrait of Barbora Ohnoutková",
+    scroll: "Scroll",
   },
   experience: {
     title: "Work & education",
@@ -29,16 +32,18 @@ export const en: Dictionary = {
         role: "Full-stack Developer",
         employment: "part-time",
         points: [
-          "Extended the eDomovnice web application and built its mobile app from scratch.",
-          "Built a public transport timetable mobile app for the city of Třebíč.",
-          "Designed mobile app interfaces in Figma.",
-          "Worked directly with a client on a large project – from requirements analysis to delivery.",
+          "Developed and maintained full-stack web applications, with a focus on the frontend.",
+          "Designed user interfaces in Figma and turned them into production code.",
+          "Worked directly with clients – from requirements analysis to delivery.",
+          "Alongside web work, also developed cross-platform mobile apps in Flutter.",
         ],
       },
       folklor: {
         role: "Content Creator",
         employment: "volunteer",
-        points: ["Filming, editing and publishing Instagram content for the Folklor bez hranic festival."],
+        points: [
+          "Filming, editing and publishing Instagram content for the Folklor bez hranic festival, sometimes also in front of the camera.",
+        ],
       },
       tietoevry: {
         role: "Software Developer",
@@ -87,10 +92,12 @@ export const en: Dictionary = {
     links: { site: "Website", paper: "Thesis text", repo: "Code" },
     prev: "Previous project",
     next: "Next project",
+    inDevelopment: "In development",
     items: {
       gamePortfolio: {
         type: "Design showcase",
         title: "Game-style portfolio",
+        summary: "This CV reimagined as a cozy indie game, with a quest log, dice rolls and a hidden Konami code.",
         description:
           "This CV as a website styled like a cozy indie game – a d20 logo intro, a quest log, a dice roll with fun facts and a hidden Konami code. I designed and coded it myself.",
         imageAlt: "Hero section of the game-style portfolio",
@@ -98,20 +105,27 @@ export const en: Dictionary = {
       masterThesis: {
         type: "Master's thesis",
         title: "Personal finance app supporting financial literacy",
+        shortTitle: "Personal finance app",
+        summary: "A personal finance app that also teaches financial literacy, with an integrated AI agent.",
         description:
-          "A web app for managing personal finances that also teaches financial literacy, with an integrated AI agent. Thesis defence in January 2027.",
+          "A web app for managing personal finances that also teaches financial literacy, with an integrated AI agent.",
+        status: "Defence in January 2027",
       },
       bachelorThesis: {
         type: "Bachelor's thesis",
         title: "Web presentation of study plans",
+        summary: "Study plans of Palacký University Olomouc, including generated promotional materials.",
         description:
           "A web app presenting the study plans of Palacký University Olomouc. It can also generate promotional materials and adjust how the data is presented.",
+        imageAlt: "Study programme overview with search and filters by type, form and language of study",
       },
       studioOpachova: {
         type: "Client project",
         title: "Studio Opachová",
+        summary: "A website for a beauty studio – I handled everything from requirements to design and build.",
         description:
           "A website for a beauty studio. I handled the whole process myself – from requirements to design and build.",
+        imageAlt: "Homepage of the Studio Jana Opachová website",
       },
     },
   },
@@ -127,21 +141,8 @@ export const en: Dictionary = {
     navigate: "Navigate",
     projects: "Projects",
     socials: "Socials",
-    builtWith: "Built with",
+    builtWith: "Loosely designed in Figma and coded in Visual Studio Code. Built with Next.js and Tailwind CSS, deployed with Vercel.",
     rights: "All rights reserved.",
-  },
-  cv: {
-    title: "CV",
-    tagline:
-      "Full-stack developer focused on frontend with 4+ years of experience building web and mobile apps. Finishing a master's degree in Applied Computer Science.",
-    experience: "Experience",
-    projects: "Selected projects",
-    skills: "Skills",
-    education: "Education",
-    languages: "Languages",
-    languageList: ["Czech – native", "English – fluent (C1)"],
-    interests: "Interests",
-    interestList: "Bouldering, folk dance, reading, video games and D&D",
   },
   notFound: {
     title: "Page not found",

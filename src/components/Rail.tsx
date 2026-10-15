@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Children, type CSSProperties, useEffect, useRef, useState } from "react";
 import { ArrowRightIcon } from "./ui/Icons";
 
 type Props = { children: React.ReactNode; prevLabel: string; nextLabel: string };
 
-/** Horizontally scrollable list of cards with buttons to scroll left and right. */
 export function Rail({ children, prevLabel, nextLabel }: Props) {
+  const count = Children.count(children);
   const list = useRef<HTMLUListElement>(null);
   const [edges, setEdges] = useState({ atStart: true, atEnd: false });
 
@@ -38,8 +38,8 @@ export function Rail({ children, prevLabel, nextLabel }: Props) {
     "grid size-10 place-items-center rounded-full border border-line text-muted transition-colors duration-300 hover:border-accent/40 hover:text-text disabled:pointer-events-none disabled:opacity-30";
 
   return (
-    <div>
-      <div className="mb-6 flex justify-end gap-2">
+    <div className="rail @container/rail" data-count={count} style={{ "--rail-count": count } as CSSProperties}>
+      <div className="rail-arrows mb-6 flex justify-end gap-2">
         <button type="button" onClick={() => scrollByCard(-1)} disabled={edges.atStart} aria-label={prevLabel} className={arrowClass}>
           <ArrowRightIcon className="size-4 rotate-180" />
         </button>
@@ -49,7 +49,7 @@ export function Rail({ children, prevLabel, nextLabel }: Props) {
       </div>
       <ul
         ref={list}
-        className="-ml-4 mr-[calc(50%-50vw)] flex snap-x snap-mandatory scroll-px-4 gap-4 overflow-x-auto pr-6 pb-6 pl-4 scrollbar-none sm:-ml-6 sm:scroll-px-6 sm:pl-6 [&::-webkit-scrollbar]:hidden"
+        className="rail-list -mx-(--gutter) flex snap-x snap-mandatory scroll-px-(--gutter) gap-4 overflow-x-auto px-(--gutter) pb-6 scrollbar-none [&::-webkit-scrollbar]:hidden"
       >
         {children}
       </ul>

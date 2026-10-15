@@ -1,6 +1,5 @@
 import type { Technology } from "@/content/profile";
 
-/** Renders a technology icon that is missing from the default simple icon set */
 export function TechIcon({ icon }: Pick<Technology, "icon">) {
   if ("paths" in icon) {
     return (

@@ -1,6 +1,5 @@
 import type { CSSProperties } from "react";
 
-// [left %, size px, duration s, delay s, rise px, sway px, phase, peak opacity] 
 const motes = [
   [8, 2, 4.2, 0.3, 22, -3, 0.1, 0.85],
   [19, 3, 5.1, 2.4, 28, 4, 0.6, 0.7],

@@ -11,14 +11,17 @@ export const cs: Dictionary = {
     label: "Hlavní navigace",
     sections: { experience: "Zkušenosti", technologies: "Technologie", projects: "Projekty", contact: "Kontakt" },
     switchTo: "Switch to English",
+    openMenu: "Otevřít menu",
+    closeMenu: "Zavřít menu",
   },
   hero: {
     greeting: "Ahoj, jsem",
     intro:
-      "Full-stack vývojářka profesí, frontendistka srdcem. Už přes 4 roky tvořím intuitivní a vizuálně zajímavé webové aplikace s velkým důrazem na detail.",
+      "Full-stack vývojářka profesí, frontend nadšením. Více než 4 roky tvořím promyšlené webové a mobilní aplikace s citem pro detail.",
     ctaPrimary: "Moje projekty",
     cv: "Stáhnout CV",
     photoAlt: "Portrét Barbory Ohnoutkové",
+    scroll: "Dolů",
   },
   experience: {
     title: "Práce a vzdělání",
@@ -29,16 +32,16 @@ export const cs: Dictionary = {
         role: "Full-stack Developer",
         employment: "částečný úvazek",
         points: [
-          "Rozšiřování webové aplikace eDomovnice a vývoj její mobilní aplikace od základu.",
-          "Vývoj mobilní aplikace jízdních řádů pro město Třebíč.",
-          "Návrh rozhraní mobilních aplikací ve Figmě.",
-          "Přímá spolupráce s klientem na rozsáhlém projektu – od analýzy požadavků po realizaci.",
+          "Vývoj a údržba full-stack webových aplikací s důrazem na frontend.",
+          "Návrh uživatelských rozhraní ve Figmě a jejich převedení do produkčního kódu.",
+          "Přímá spolupráce s klienty – od analýzy požadavků po realizaci.",
+          "Vedle webu také vývoj multiplatformních mobilních aplikací ve Flutteru.",
         ],
       },
       folklor: {
         role: "Content Creator",
         employment: "dobrovolnictví",
-        points: ["Natáčení, střih a publikace obsahu na Instagram festivalu Folklor bez hranic."],
+        points: ["Natáčení, střih a publikace obsahu na Instagram festivalu Folklor bez hranic, občas i před kamerou."],
       },
       tietoevry: {
         role: "Software Developer",
@@ -87,10 +90,12 @@ export const cs: Dictionary = {
     links: { site: "Web", paper: "Text práce", repo: "Kód" },
     prev: "Předchozí projekt",
     next: "Další projekt",
+    inDevelopment: "Ve vývoji",
     items: {
       gamePortfolio: {
         type: "Ukázka designu",
         title: "Portfolio ve stylu hry",
+        summary: "Tento životopis jako útulná indie hra – s deníkem úkolů, hodem kostkou a skrytým Konami kódem.",
         description:
           "Tento životopis jako web ve stylu útulné indie hry – úvodní animace s logem v podobě kostky d20, deník úkolů, hod kostkou se zajímavostmi a skrytý Konami kód. Navrhla a nakódovala jsem ho sama.",
         imageAlt: "Úvodní sekce portfolia ve stylu hry",
@@ -98,19 +103,26 @@ export const cs: Dictionary = {
       masterThesis: {
         type: "Diplomová práce",
         title: "Aplikace pro správu osobních financí s podporou finanční gramotnosti",
+        shortTitle: "Aplikace pro osobní finance",
+        summary: "Aplikace na osobní finance, která zároveň učí finanční gramotnosti, s AI agentem.",
         description:
-          "Webová aplikace pro správu osobních financí, která zároveň učí finanční gramotnosti, s integrovaným AI agentem. Obhajoba v lednu 2027.",
+          "Webová aplikace pro správu osobních financí, která zároveň učí finanční gramotnosti, s integrovaným AI agentem.",
+        status: "Obhajoba v lednu 2027",
       },
       bachelorThesis: {
         type: "Bakalářská práce",
         title: "Webová prezentace studijních plánů",
+        summary: "Studijní plány Univerzity Palackého v Olomouci včetně generování propagačních materiálů.",
         description:
           "Webová aplikace pro prezentaci studijních plánů Univerzity Palackého v Olomouci. Umí také generovat propagační materiály a upravovat způsob prezentace dat.",
+        imageAlt: "Přehled nabídky studia s vyhledáváním a filtry podle typu, formy a jazyka studia",
       },
       studioOpachova: {
         type: "Projekt pro klienta",
         title: "Studio Opachová",
+        summary: "Web pro kosmetické studio – celý proces od požadavků přes návrh po realizaci jsem vedla sama.",
         description: "Web pro kosmetické studio. Celý proces jsem vedla sama – od požadavků přes návrh po realizaci.",
+        imageAlt: "Úvodní stránka webu Studio Jana Opachová",
       },
     },
   },
@@ -126,21 +138,8 @@ export const cs: Dictionary = {
     navigate: "Navigace",
     projects: "Projekty",
     socials: "Sítě",
-    builtWith: "Postaveno na",
+    builtWith: "Vlastnoručně navrženo ve Figmě a nakódováno ve Visual Studio Code. Postaveno s Next.js a Tailwind CSS, nasazeno s Vercel.",
     rights: "Všechna práva vyhrazena.",
-  },
-  cv: {
-    title: "Životopis",
-    tagline:
-      "Full-stack vývojářka se zaměřením na frontend a 4+ roky praxe ve vývoji webových a mobilních aplikací. Dokončuji magisterské studium Aplikované informatiky.",
-    experience: "Pracovní zkušenosti",
-    projects: "Vybrané projekty",
-    skills: "Dovednosti",
-    education: "Vzdělání",
-    languages: "Jazyky",
-    languageList: ["Čeština – rodilá mluvčí", "Angličtina – plynně (C1)"],
-    interests: "Zájmy",
-    interestList: "Bouldering, folklorní tanec, čtení, videohry a D&D",
   },
   notFound: {
     title: "Stránka nenalezena",

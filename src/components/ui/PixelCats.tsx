@@ -1,6 +1,5 @@
 import type { CSSProperties } from "react";
 
-// 14×16 sitting cats, tail on the right. O orange, o stripe, W white, K eye, P nose, . empty
 const orangeCat = [
   "..O........O..",
   "..OO......OO..",
@@ -47,7 +46,6 @@ const colors: Record<string, string> = {
   P: "#f2a4ae",
 };
 
-/** One path per colour, merging horizontal runs of pixels. */
 function toPaths(grid: string[]) {
   const paths: Record<string, string> = {};
   grid.forEach((row, y) => {
@@ -62,7 +60,6 @@ function toPaths(grid: string[]) {
   return paths;
 }
 
-// Heart shape for the cats to show when hovered. 
 const heart = toPaths([".HH.HH.", "HHHHHHH", "HHHHHHH", ".HHHHH.", "..HHH..", "...H..."]).H;
 
 function Cat({ grid, mirrored = false, blinkDelay }: { grid: string[]; mirrored?: boolean; blinkDelay: string }) {
@@ -97,7 +94,6 @@ function Cat({ grid, mirrored = false, blinkDelay }: { grid: string[]; mirrored?
   );
 }
 
-/** Kebab and Mugen, sitting tails-out. Hovering one makes it hop and shows a heart. */
 export function PixelCats({ label }: { label: string }) {
   return (
     <div role="img" aria-label={label} title={label} className="flex items-end gap-1 pt-4">
