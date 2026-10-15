@@ -2,7 +2,7 @@ import type { Dictionary } from "./types";
 
 export const cs: Dictionary = {
   meta: {
-    title: "Barbora Ohnoutková · Full-stack vývojářka (frontend)",
+    title: "Barbora Ohnoutková · Full-stack developer",
     description:
       "Barbora Ohnoutková – full-stack vývojářka se zaměřením na frontend, 4+ roky praxe (React, Next.js, TypeScript, Flutter). Portfolio a životopis.",
   },
