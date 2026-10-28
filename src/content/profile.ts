@@ -15,6 +15,7 @@ import {
   siGithub,
   siHtml5,
   siJavascript,
+  siJira,
   siNextdotjs,
   siNodedotjs,
   siOpenrouter,
@@ -23,6 +24,7 @@ import {
   siPrisma,
   siReact,
   siTailwindcss,
+  siTrello,
   siTypescript,
   siVercel,
 } from "simple-icons";
@@ -50,7 +52,7 @@ export const socials = [
   { id: "instagram", label: "Instagram", href: "https://www.instagram.com/ohnoutkova.b/" },
 ] as const;
 
-export const cvFile = (locale: Locale) => `/cv/barbora-ohnoutkova-cv-${locale}.pdf`;
+export const cvFile = (locale: Locale) => `/cv/ohnoutkova-cv-${locale}.pdf`;
 
 export type TranslatedTech = "wireframing" | "prototyping";
 
@@ -97,6 +99,17 @@ export const techGroups = [
       { name: "Figma", icon: siFigma },
       { name: "Wireframing", icon: wireframeIcon, label: "wireframing" },
       { name: "Prototyping", icon: prototypeIcon, label: "prototyping" },
+    ],
+  },
+  {
+    id: "management",
+    items: [
+      { name: "Scrum", icon: wireframeIcon },
+      { name: "Kanban", icon: wireframeIcon },
+      { name: "PRINCE2", icon: wireframeIcon },
+      { name: "Jira", icon: siJira },
+      { name: "Trello", icon: siTrello },
+      { name: "Projektově", icon: prototypeIcon },
     ],
   },
   { id: "ai", items: [{ name: "DeepSeek", icon: siDeepseek }, { name: "OpenRouter", icon: siOpenrouter }] },

@@ -4,7 +4,7 @@ export const en: Dictionary = {
   meta: {
     title: "Barbora Ohnoutková · Full-stack developer",
     description:
-      "Barbora Ohnoutková – full-stack developer focused on frontend, 4+ years of experience (React, Next.js, TypeScript, Flutter). Portfolio and CV.",
+      "Barbora Ohnoutková – full-stack developer and project manager, 4+ years of experience (React, Next.js, TypeScript, Flutter). Portfolio and CV.",
   },
   skipToContent: "Skip to content",
   nav: {
@@ -17,7 +17,7 @@ export const en: Dictionary = {
   hero: {
     greeting: "Hi, I'm",
     intro:
-      "Full-stack by profession, frontend by passion. For 4+ years, crafting thoughtful web and mobile experiences with an eye for detail.",
+      "Full-stack by profession, project manager by passion. For 4+ years, crafting thoughtful web and mobile experiences with an eye for detail.",
     ctaPrimary: "See my work",
     cv: "Download CV",
     photoAlt: "Portrait of Barbora Ohnoutková",
@@ -29,12 +29,12 @@ export const en: Dictionary = {
     present: "present",
     work: {
       smartgis: {
-        role: "Full-stack Developer",
+        role: "Full-stack Developer & Project Manager",
         employment: "part-time",
         points: [
+          "Led several projects as a project manager, including regular online meetings with clients from requirements analysis to delivery and implementing requested changes.",
           "Developed and maintained full-stack web applications, with a focus on the frontend.",
           "Designed user interfaces in Figma and turned them into production code.",
-          "Worked directly with clients – from requirements analysis to delivery.",
           "Alongside web work, also developed cross-platform mobile apps in Flutter.",
         ],
       },
@@ -83,6 +83,7 @@ export const en: Dictionary = {
       frameworks: "Frameworks",
       tools: "Tools",
       design: "Design",
+      management: "Project Management",
       ai: "AI",
     },
     labels: { wireframing: "Wireframing", prototyping: "Prototyping" },
@@ -122,7 +123,7 @@ export const en: Dictionary = {
       studioOpachova: {
         type: "Client project",
         title: "Studio Opachová",
-        summary: "A website for a beauty studio – I handled everything from requirements to design and build.",
+        summary: "I led the project from requirements through design to launch, stayed in regular contact with the client and implemented their requested changes.",
         description:
           "A website for a beauty studio. I handled the whole process myself – from requirements to design and build.",
         imageAlt: "Homepage of the Studio Jana Opachová website",
@@ -130,13 +131,13 @@ export const en: Dictionary = {
     },
   },
   contact: {
-    title: "Looking for a frontend developer? Send me an e-mail.",
+    title: "Looking for a frontend developer or project manager? Send me an e-mail.",
     note: "Ostrava · Open to work",
     email: "E-mail",
     phone: "Phone",
   },
   footer: {
-    tagline: "Full-stack developer focused on frontend, based in Ostrava.",
+    tagline: "Full-stack developer and project manager, based in Ostrava.",
     cats: "My cats Kebab and Mugen",
     navigate: "Navigate",
     projects: "Projects",

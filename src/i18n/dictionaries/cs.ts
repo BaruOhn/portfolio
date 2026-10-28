@@ -4,7 +4,7 @@ export const cs: Dictionary = {
   meta: {
     title: "Barbora Ohnoutková · Full-stack developer",
     description:
-      "Barbora Ohnoutková – full-stack vývojářka se zaměřením na frontend, 4+ roky praxe (React, Next.js, TypeScript, Flutter). Portfolio a životopis.",
+      "Barbora Ohnoutková – full-stack vývojářka a projektová manažerka, 4+ roky praxe (React, Next.js, TypeScript, Flutter). Portfolio a životopis.",
   },
   skipToContent: "Přeskočit na obsah",
   nav: {
@@ -17,7 +17,7 @@ export const cs: Dictionary = {
   hero: {
     greeting: "Ahoj, jsem",
     intro:
-      "Full-stack vývojářka profesí, frontend nadšením. Více než 4 roky tvořím promyšlené webové a mobilní aplikace s citem pro detail.",
+      "Full-stack vývojářka profesí, projektová manažerka nadšením. Více než 4 roky tvořím promyšlené webové a mobilní aplikace s citem pro detail.",
     ctaPrimary: "Moje projekty",
     cv: "Stáhnout CV",
     photoAlt: "Portrét Barbory Ohnoutkové",
@@ -29,12 +29,12 @@ export const cs: Dictionary = {
     present: "dosud",
     work: {
       smartgis: {
-        role: "Full-stack Developer",
+        role: "Full-stack Developer & Project Manager",
         employment: "částečný úvazek",
         points: [
+          "Vedení několika projektů v roli projektové manažerky, včetně pravidelných online schůzek s klienty od analýzy požadavků po realizaci a zapracování požadovaných změn.",
           "Vývoj a údržba full-stack webových aplikací s důrazem na frontend.",
           "Návrh uživatelských rozhraní ve Figmě a jejich převedení do produkčního kódu.",
-          "Přímá spolupráce s klienty – od analýzy požadavků po realizaci.",
           "Vedle webu také vývoj multiplatformních mobilních aplikací ve Flutteru.",
         ],
       },
@@ -81,6 +81,7 @@ export const cs: Dictionary = {
       frameworks: "Frameworky",
       tools: "Nástroje",
       design: "Design",
+      management: "Projektové řízení",
       ai: "AI",
     },
     labels: { wireframing: "Wireframy", prototyping: "Prototypování" },
@@ -120,20 +121,20 @@ export const cs: Dictionary = {
       studioOpachova: {
         type: "Projekt pro klienta",
         title: "Studio Opachová",
-        summary: "Web pro kosmetické studio – celý proces od požadavků přes návrh po realizaci jsem vedla sama.",
+        summary: "Web pro kosmetické studio. Projekt jsem vedla od požadavků přes návrh až po spuštění, s klientem jsem byla v pravidelném kontaktu a zapracovávala požadované změny.",
         description: "Web pro kosmetické studio. Celý proces jsem vedla sama – od požadavků přes návrh po realizaci.",
         imageAlt: "Úvodní stránka webu Studio Jana Opachová",
       },
     },
   },
   contact: {
-    title: "Hledáte frontend vývojářku? Napište mi e-mail.",
+    title: "Hledáte frontend vývojářku nebo projektové řízení? Napište mi e-mail.",
     note: "Ostrava · Hledám práci",
     email: "E-mail",
     phone: "Telefon",
   },
   footer: {
-    tagline: "Full-stack vývojářka se zaměřením na frontend z Ostravy.",
+    tagline: "Full-stack vývojářka a projektová manažerka z Ostravy.",
     cats: "Moji kocouři Kebab a Mugen",
     navigate: "Navigace",
     projects: "Projekty",
